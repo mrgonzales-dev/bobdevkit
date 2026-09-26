@@ -1,6 +1,6 @@
 <script setup>
 const lines = [
-  { cls: 'usr', text: '$ curl -fsSL https://raw.githubusercontent.com/mrgonzales-dev/ibmbob-hackathon/main/bobdevkit/install.sh | sh' },
+  { cls: 'usr', text: '$ curl -fsSL https://raw.githubusercontent.com/mrgonzales-dev/bobdevkit/main/bobdevkit/install.sh | sh' },
   { cls: 'ban', text: '██████╗  ██████╗ ██████╗     ██████╗ ███████╗██╗   ██╗██╗  ██╗██╗████████╗' },
   { cls: 'ban', text: '██╔══██╗██╔═══██╗██╔══██╗    ██╔══██╗██╔════╝██║   ██║██║ ██╔╝██║╚══██╔══╝' },
   { cls: 'ban', text: '██████╔╝██║   ██║██████╔╝    ██║  ██║█████╗  ██║   ██║█████╔╝ ██║   ██║   ' },
@@ -9,7 +9,7 @@ const lines = [
   { cls: 'ban', text: '╚═════╝  ╚═════╝ ╚═════╝     ╚═════╝ ╚══════╝  ╚═══╝  ╚═╝  ╚═╝╚═╝   ╚═╝   ' },
   { cls: 'res', text: '  terminal-native skills for your AI agent' },
   { cls: 'res', text: '' },
-  { cls: 'res', text: 'downloading bobdevkit from github.com/mrgonzales-dev/ibmbob-hackathon@main' },
+  { cls: 'res', text: 'downloading bobdevkit from github.com/mrgonzales-dev/bobdevkit@main' },
   { cls: 'prm', text: '? which skills? (space to toggle, enter to confirm)' },
   { cls: 'sel', text: '❯ [x] bob-upgrade-check' },
   { cls: 'chk', text: '  [x] bob-impact' },

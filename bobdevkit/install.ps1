@@ -2,7 +2,7 @@
 # into an AI agent's skills directory.
 #
 # From a clone:   .\install.ps1 [-Global|-Project] [-Agent NAME] [-Dir DIR] [-Uninstall]
-# One-liner:      irm https://raw.githubusercontent.com/mrgonzales-dev/ibmbob-hackathon/main/bobdevkit/install.ps1 | iex
+# One-liner:      irm https://raw.githubusercontent.com/mrgonzales-dev/bobdevkit/main/bobdevkit/install.ps1 | iex
 #
 # Project scope (default): installs into every detected agent config dir
 # in the current directory (.bob .devin .claude .cursor); creates
@@ -20,7 +20,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
-$Repo      = "mrgonzales-dev/ibmbob-hackathon"
+$Repo      = "mrgonzales-dev/bobdevkit"
 $Branch    = "main"
 $AllSkills = @("bob-upgrade-check", "bob-impact", "bob-pr")
 $Color     = -not $env:NO_COLOR -and [Environment]::UserInteractive
@@ -132,7 +132,7 @@ if ($ScriptDir -and (Test-Path "$ScriptDir\bob-pr\SKILL.md")) {
     Write-Step "downloading bobdevkit from github.com/$Repo@$Branch"
     Invoke-WebRequest "https://codeload.github.com/$Repo/zip/refs/heads/$Branch" -OutFile $zip
     Expand-Archive $zip -DestinationPath $Tmp
-    $Src = Join-Path $Tmp "ibmbob-hackathon-$Branch\bobdevkit"
+    $Src = Join-Path $Tmp "bobdevkit-$Branch\bobdevkit"
     if (-not (Test-Path $Src)) { throw "install.ps1: package missing in archive" }
 }
 

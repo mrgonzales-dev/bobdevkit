@@ -5,7 +5,7 @@
       <a href="#demo">demo</a>
       <a href="#install">install</a>
       <a href="#skills">skills</a>
-      <a class="gh" href="https://github.com/mrgonzales-dev/ibmbob-hackathon">github</a>
+      <a class="gh" href="https://github.com/mrgonzales-dev/bobdevkit">github</a>
     </nav>
   </header>
 </template>

@@ -13,7 +13,7 @@
       </div>
       <div class="col">
         <p class="head">project</p>
-        <a href="https://github.com/mrgonzales-dev/ibmbob-hackathon">github</a>
+        <a href="https://github.com/mrgonzales-dev/bobdevkit">github</a>
         <a href="#demo">demo</a>
       </div>
     </div>

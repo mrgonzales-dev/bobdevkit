@@ -14,13 +14,13 @@ Windsurf — gets all three after one install.
 **macOS / Linux**
 
 ```shell
-curl -fsSL https://raw.githubusercontent.com/mrgonzales-dev/ibmbob-hackathon/main/bobdevkit/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/mrgonzales-dev/bobdevkit/main/bobdevkit/install.sh | sh
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
-irm https://raw.githubusercontent.com/mrgonzales-dev/ibmbob-hackathon/main/bobdevkit/install.ps1 | iex
+irm https://raw.githubusercontent.com/mrgonzales-dev/bobdevkit/main/bobdevkit/install.ps1 | iex
 ```
 
 One command does everything — it downloads the package, shows a picker

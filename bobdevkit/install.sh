@@ -3,7 +3,7 @@
 # agent's skills directory.
 #
 # From a clone:   ./install.sh [--global|--project] [--agent NAME] [--dir DIR] [--uninstall]
-# One-liner:      curl -fsSL https://raw.githubusercontent.com/mrgonzales-dev/ibmbob-hackathon/main/bobdevkit/install.sh | sh
+# One-liner:      curl -fsSL https://raw.githubusercontent.com/mrgonzales-dev/bobdevkit/main/bobdevkit/install.sh | sh
 #
 # Project scope (default): installs into every detected agent config dir
 # in the current directory (.bob .devin .claude .cursor); creates
@@ -11,7 +11,7 @@
 # skills dir (default: ~/.bob/skills).
 set -eu
 
-REPO="mrgonzales-dev/ibmbob-hackathon"
+REPO="mrgonzales-dev/bobdevkit"
 BRANCH="main"
 ALL_SKILLS="bob-upgrade-check bob-impact bob-pr"
 SKILL_DIR_NAME="skills"
@@ -258,7 +258,7 @@ else
         echo "install.sh: need curl or wget to download the package" >&2
         exit 1
     fi
-    SRC="$TMP/ibmbob-hackathon-$BRANCH/bobdevkit"
+    SRC="$TMP/bobdevkit-$BRANCH/bobdevkit"
     [ -d "$SRC" ] || { echo "install.sh: package missing in tarball" >&2; exit 1; }
 fi
 
