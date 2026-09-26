@@ -9,7 +9,7 @@ import TerminalDemo from './TerminalDemo.vue'
       <span class="grad">BOB devkit</span>
     </h1>
     <p class="sub reveal">
-      A skill kit for your agents — agent work, human gated.
+      A skill kit for your agents that is optimized using IBM BOB 2.0
     </p>
     <div class="cta-row reveal">
       <a class="btn primary" href="#skills">browse the skills</a>
