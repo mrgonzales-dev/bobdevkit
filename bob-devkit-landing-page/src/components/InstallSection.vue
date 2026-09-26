@@ -1,24 +1,31 @@
 <script setup>
 const lines = [
-  { cls: 'usr', text: '$ bobdevkit install' },
-  { cls: 'res', text: 'detecting agent environments...' },
-  { cls: 'res', text: '  found: bob-devkit, windsurf, cursor' },
-  { cls: 'prm', text: '' },
-  { cls: 'prm', text: '? which agent do you use?' },
-  { cls: 'sel', text: '  ❯ BOB devkit' },
-  { cls: 'opt', text: '    Windsurf' },
-  { cls: 'opt', text: '    Cursor' },
-  { cls: 'opt', text: '    Devin' },
-  { cls: 'prm', text: '' },
-  { cls: 'prm', text: '? which skills? (space to toggle)' },
-  { cls: 'chk', text: '  [x] bob-pr        plan review gate' },
-  { cls: 'chk', text: '  [x] bob-upgrade-check   dependency upgrades' },
-  { cls: 'chk', text: '  [x] bob-impact    change impact' },
-  { cls: 'prm', text: '' },
-  { cls: 'res', text: 'installing 3 skills → ~/.bob/skills/' },
-  { cls: 'okl', text: '✓ bob-pr       installed' },
-  { cls: 'okl', text: '✓ bob-upgrade-check  installed' },
-  { cls: 'okl', text: '✓ bob-impact   installed' },
+  { cls: 'usr', text: '$ curl -fsSL https://raw.githubusercontent.com/mrgonzales-dev/ibmbob-hackathon/main/bobdevkit/install.sh | sh' },
+  { cls: 'ban', text: '██████╗  ██████╗ ██████╗     ██████╗ ███████╗██╗   ██╗██╗  ██╗██╗████████╗' },
+  { cls: 'ban', text: '██╔══██╗██╔═══██╗██╔══██╗    ██╔══██╗██╔════╝██║   ██║██║ ██╔╝██║╚══██╔══╝' },
+  { cls: 'ban', text: '██████╔╝██║   ██║██████╔╝    ██║  ██║█████╗  ██║   ██║█████╔╝ ██║   ██║   ' },
+  { cls: 'ban', text: '██╔══██╗██║   ██║██╔══██╗    ██║  ██║██╔══╝  ╚██╗ ██╔╝██╔═██╗ ██║   ██║   ' },
+  { cls: 'ban', text: '██████╔╝╚██████╔╝██████╔╝    ██████╔╝███████╗ ╚████╔╝ ██║  ██╗██║   ██║   ' },
+  { cls: 'ban', text: '╚═════╝  ╚═════╝ ╚═════╝     ╚═════╝ ╚══════╝  ╚═══╝  ╚═╝  ╚═╝╚═╝   ╚═╝   ' },
+  { cls: 'res', text: '  terminal-native skills for your AI agent' },
+  { cls: 'res', text: '' },
+  { cls: 'res', text: 'downloading bobdevkit from github.com/mrgonzales-dev/ibmbob-hackathon@main' },
+  { cls: 'prm', text: '? which skills? (space to toggle, enter to confirm)' },
+  { cls: 'sel', text: '❯ [x] bob-upgrade-check' },
+  { cls: 'chk', text: '  [x] bob-impact' },
+  { cls: 'chk', text: '  [x] bob-pr' },
+  { cls: 'res', text: 'detecting agent environments…' },
+  { cls: 'res', text: '  found: .bob,.devin,.cursor' },
+  { cls: 'prm', text: '? install into which? (enter to pick)' },
+  { cls: 'sel', text: '❯ .bob/skills' },
+  { cls: 'opt', text: '  .devin/skills' },
+  { cls: 'opt', text: '  .cursor/skills' },
+  { cls: 'opt', text: '  all of the above' },
+  { cls: 'res', text: 'installing into .bob/skills' },
+  { cls: 'okl', text: '✓ bob-upgrade-check installed' },
+  { cls: 'okl', text: '✓ bob-impact installed' },
+  { cls: 'okl', text: '✓ bob-pr installed' },
+  { cls: 'res', text: '' },
   { cls: 'okl', text: '✓ done — restart your agent' },
 ]
 </script>
@@ -26,11 +33,11 @@ const lines = [
 <template>
   <section class="install" id="install">
     <h2 class="reveal">install</h2>
-    <p class="hint reveal">One command. Pick your agent, pick your skills.</p>
+    <p class="hint reveal">One command. Pick your skills, pick where they land.</p>
     <div class="term reveal">
       <div class="term-bar">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="term-title">bobdevkit — installer</span>
+        <span class="term-title">bobdevkit — install.sh</span>
       </div>
       <div class="term-body">
         <p
@@ -111,6 +118,7 @@ h2 {
 }
 
 .usr { color: var(--ink); font-weight: 700; }
+.ban { color: var(--purple); font-weight: 700; font-size: 11px; line-height: 1.25; }
 .prm { color: var(--blue); font-weight: 700; }
 .sel { color: #fff; background: var(--blue); font-weight: 700; }
 .opt { color: var(--muted); }
